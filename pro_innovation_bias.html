@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pro-innovation bias - mando&#x27;s collection of essays</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="pro_innovation_bias.html" class="active"><strong aria-hidden="true">1.</strong> Pro-innovation bias</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">mando&#x27;s collection of essays</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pro-innovation-bias"><a class="header" href="#pro-innovation-bias">Pro-innovation bias</a></h1>
+<p>Created: 2025-09-19</p>
+<p>Pro-innovation bias refers to the tendency to overvalue the benefits of new technologies, innovations, or ideas while underestimating or ignoring their potential drawbacks and limitations. This cognitive bias often leads to the belief that newer is inherently better, fostering a culture where innovation is pursued without sufficient critical evaluation of its impacts. While pro-innovation bias can drive progress and creativity, it can also result in unintended consequences, overlooking societal, ethical, and environmental considerations.</p>
+<p>At its core, pro-innovation bias emerges from the human inclination to embrace change and improvement. This mindset is particularly prevalent in technology-driven fields where constant advancement is the norm. The rapid pace of innovation, especially in areas like artificial intelligence, biotechnology, and renewable energy, exemplifies this bias. These sectors are often celebrated for their transformative potential, with new products and ideas hailed as solutions to complex global challenges such as climate change, healthcare access, and economic inequality.</p>
+<p>However, pro-innovation bias can obscure the potential risks and downsides of new technologies. For example, the introduction of genetically modified organisms (GMOs) in agriculture was initially seen as a groundbreaking solution to food security. While GMOs have indeed contributed to increased crop yields and resilience, the rush to adopt this technology led to controversies regarding ecological impacts, corporate control over seeds, and long-term health effects. Critics argue that a more balanced view, one that carefully weighs benefits against risks, might have led to a more cautious and inclusive deployment of GMOs.</p>
+<p>In the digital realm, pro-innovation bias is evident in the rapid adoption of social media platforms and artificial intelligence. These technologies have revolutionized communication, entertainment, and information access. Yet, their negative aspects, such as privacy violations, misinformation, and algorithmic biases, were largely overlooked in the initial phases of their deployment. As a result, societies are now grappling with issues like data misuse, digital addiction, and the amplification of divisive content, problems that were not sufficiently anticipated due to an overemphasis on the positive aspects of innovation.</p>
+<p>Pro-innovation bias can also stifle critical discourse by framing opposition as anti-progress or Luddite. This rhetoric can marginalize legitimate concerns and voices, particularly those from vulnerable communities who may be disproportionately affected by new technologies. For instance, the rapid deployment of automation in industries often disregards the impact on workers and local economies. While automation can increase efficiency and reduce costs, it can also lead to significant job displacement, necessitating robust policies for retraining and social support—issues that may be sidelined in a pro-innovation narrative.</p>
+<p>Balancing the enthusiasm for innovation with a critical assessment of its broader implications is essential for responsible technological development. Policymakers, scientists, and innovators must engage in open dialogues with diverse stakeholders, including the public, to ensure that new technologies are not only effective but also equitable and sustainable. This approach requires acknowledging that not all innovations are inherently positive and that some may need to be regulated, modified, or even abandoned to serve the greater good.</p>
+<p>In conclusion, while pro-innovation bias can catalyze technological progress and foster a spirit of creativity and ambition, it also carries the risk of promoting a one-sided view of progress. Acknowledging and mitigating this bias is crucial to ensuring that innovation serves society as a whole, rather than advancing unchecked at the expense of ethical, social, and environmental well-being. By embracing a more nuanced perspective, we can navigate the complexities of technological advancement with greater wisdom and foresight...</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
