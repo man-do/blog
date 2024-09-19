@@ -1,0 +1,6 @@
+[book]
+authors = ["Armando Selvija"]
+language = "en"
+multilingual = false
+src = "src"
+title = "mando's collection of essays"
